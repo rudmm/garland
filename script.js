@@ -25,10 +25,12 @@ function setColor(circles){
 setColor(circles);
 button.click(function(){
 	if(!interval){
+		button.text('OFF');
 interval = setInterval(setColor, 500, circles);
 }else{
 	clearInterval(interval);
 	interval = undefined;
+	button.text('ON');
 }
 	
 });
